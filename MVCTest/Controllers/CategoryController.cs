@@ -14,7 +14,7 @@ namespace MVCTest.Controllers
         {
             List<Category> objCreategoryList = _db.Categories.ToList();
             return View(objCreategoryList);
-
+            //TEST
         }
     }
 }
