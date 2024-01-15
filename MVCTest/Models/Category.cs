@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace MVCTest.Models
 {
@@ -7,7 +8,9 @@ namespace MVCTest.Models
         [Key]
         public int Id { get; set; }
         [Required]
+        [DisplayName("類別名稱")]
         public string Name { get; set; }
+        [DisplayName("顯示順序")]
         public int DisplayOrder {  get; set; }
     }
 }

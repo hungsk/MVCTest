@@ -14,7 +14,19 @@ namespace MVCTest.Controllers
         {
             List<Category> objCreategoryList = _db.Categories.ToList();
             return View(objCreategoryList);
-            //TEST
+        }
+
+        public IActionResult Create() 
+        { 
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Category obj)
+        {
+            _db.Categories.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
