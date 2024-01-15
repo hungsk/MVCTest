@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MVCTest.DataAccess\MVCTest.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

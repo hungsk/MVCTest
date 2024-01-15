@@ -1,0 +1,11 @@
+E:\Projects\Core\MVCTest\MVCTest.Models\bin\Debug\net6.0\MVCTest.Models.deps.json
+E:\Projects\Core\MVCTest\MVCTest.Models\bin\Debug\net6.0\MVCTest.Models.dll
+E:\Projects\Core\MVCTest\MVCTest.Models\bin\Debug\net6.0\MVCTest.Models.pdb
+E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\MVCTest.Models.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\MVCTest.Models.AssemblyInfoInputs.cache
+E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\MVCTest.Models.AssemblyInfo.cs
+E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\MVCTest.Models.csproj.CoreCompileInputs.cache
+E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\MVCTest.Models.dll
+E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\refint\MVCTest.Models.dll
+E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\MVCTest.Models.pdb
+E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\ref\MVCTest.Models.dll

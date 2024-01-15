@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using MVCTest.Data;
+using MVCTest.DataAccess.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

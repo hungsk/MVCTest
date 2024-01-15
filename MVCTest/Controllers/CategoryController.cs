@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MVCTest.Data;
+using MVCTest.DataAccess.Data;
 using MVCTest.Models;
 
 namespace MVCTest.Controllers

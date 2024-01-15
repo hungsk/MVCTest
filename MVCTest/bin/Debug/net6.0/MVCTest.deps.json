@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "MVCTest/1.0.0": {
         "dependencies": {
+          "MVCTest.DataAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.26",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.26"
@@ -444,6 +445,27 @@
             "fileVersion": "4.700.19.56404"
           }
         }
+      },
+      "MVCTest.DataAccess/1.0.0": {
+        "dependencies": {
+          "MVCTest.Models": "1.0.0",
+          "MVCTest.Utility": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.26",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26"
+        },
+        "runtime": {
+          "MVCTest.DataAccess.dll": {}
+        }
+      },
+      "MVCTest.Models/1.0.0": {
+        "runtime": {
+          "MVCTest.Models.dll": {}
+        }
+      },
+      "MVCTest.Utility/1.0.0": {
+        "runtime": {
+          "MVCTest.Utility.dll": {}
+        }
       }
     }
   },
@@ -753,6 +775,21 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "MVCTest.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MVCTest.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MVCTest.Utility/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -782,6 +782,42 @@
             "rid": "win"
           }
         }
+      },
+      "MVCTest.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MVCTest.Models": "1.0.0",
+          "MVCTest.Utility": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.26",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26"
+        },
+        "compile": {
+          "bin/placeholder/MVCTest.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVCTest.DataAccess.dll": {}
+        }
+      },
+      "MVCTest.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/MVCTest.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVCTest.Models.dll": {}
+        }
+      },
+      "MVCTest.Utility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/MVCTest.Utility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVCTest.Utility.dll": {}
+        }
       }
     }
   },
@@ -2003,10 +2039,26 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "MVCTest.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../MVCTest.DataAccess/MVCTest.DataAccess.csproj",
+      "msbuildProject": "../MVCTest.DataAccess/MVCTest.DataAccess.csproj"
+    },
+    "MVCTest.Models/1.0.0": {
+      "type": "project",
+      "path": "../MVCTest.Models/MVCTest.Models.csproj",
+      "msbuildProject": "../MVCTest.Models/MVCTest.Models.csproj"
+    },
+    "MVCTest.Utility/1.0.0": {
+      "type": "project",
+      "path": "../MVCTest.Utility/MVCTest.Utility.csproj",
+      "msbuildProject": "../MVCTest.Utility/MVCTest.Utility.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "MVCTest.DataAccess >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.26",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.26",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.26"
@@ -2038,7 +2090,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\Projects\\Core\\MVCTest\\MVCTest.DataAccess\\MVCTest.DataAccess.csproj": {
+              "projectPath": "E:\\Projects\\Core\\MVCTest\\MVCTest.DataAccess\\MVCTest.DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
