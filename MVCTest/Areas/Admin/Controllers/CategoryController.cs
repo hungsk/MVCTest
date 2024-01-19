@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GenericServices;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MVCTest.DataAccess.Data;
 using MVCTest.Models;
 
@@ -6,14 +8,17 @@ namespace MVCTest.Areas.Admin.Controllers
 {
     public class CategoryController : Controller
     {
-        private readonly ApplicationDbContext _db;
-        public CategoryController(ApplicationDbContext db)
+        //private readonly ApplicationDbContext _db;
+        private readonly ICrudServices _service;
+        public CategoryController(ICrudServices service)
         {
-            _db = db;
+            //_db = db;
+            _service = service;
         }
         public IActionResult Index()
         {
-            List<Category> objCreategoryList = _db.Categories.ToList();
+            //List<Category> objCreategoryList = _db.Categories.ToList();
+            List<Category> objCreategoryList = _service.ReadManyNoTracked<Category>().ToList();
             return View(objCreategoryList);
         }
 
@@ -32,8 +37,9 @@ namespace MVCTest.Areas.Admin.Controllers
 
             if (ModelState.IsValid)
             {
-                _db.Categories.Add(obj);
-                _db.SaveChanges();
+                _service.CreateAndSave(obj);
+                //_db.Categories.Add(obj);
+                //_db.SaveChanges();
 
                 TempData["success"] = "類別新增成功!";
                 return RedirectToAction("Index");
@@ -47,7 +53,8 @@ namespace MVCTest.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            Category? categoryFromDb = _db.Categories.Find(id);
+            //Category? categoryFromDb = _db.Categories.Find(id);
+            Category? categoryFromDb = _service.ReadSingle<Category>(id);
             if (categoryFromDb == null)
             {
                 return NotFound();
@@ -60,8 +67,9 @@ namespace MVCTest.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Categories.Update(obj);
-                _db.SaveChanges();
+                _service.UpdateAndSave(obj);
+                //_db.Categories.Update(obj);
+                //_db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View();
@@ -73,7 +81,8 @@ namespace MVCTest.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            Category categoryFromDb = _db.Categories.Find(id);
+            //Category categoryFromDb = _db.Categories.Find(id);
+            Category? categoryFromDb = _service.ReadSingle<Category>(id);
             if (categoryFromDb == null)
             {
                 return NotFound();
@@ -84,13 +93,15 @@ namespace MVCTest.Areas.Admin.Controllers
         [HttpPost, ActionName("Delete")]
         public IActionResult Delete(int? id)
         {
-            Category? obj = _db.Categories.Find(id);
+            //Category? obj = _db.Categories.Find(id);
+            Category? obj = _service.ReadSingle<Category>(id);
             if (obj == null)
             {
                 return NotFound();
             }
-            _db.Categories.Remove(obj);
-            _db.SaveChanges();
+            _service.DeleteAndSave<Category>(obj.Id);
+            //_db.Categories.Remove(obj);
+            //_db.SaveChanges();
             return RedirectToAction("Index");
         }
 

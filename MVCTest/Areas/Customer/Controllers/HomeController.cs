@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GenericServices;
+using Microsoft.AspNetCore.Mvc;
 using MVCTest.Models;
 using System.Diagnostics;
 

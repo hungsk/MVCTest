@@ -9,3 +9,4 @@ E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\MVCTest.Models.dll
 E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\refint\MVCTest.Models.dll
 E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\MVCTest.Models.pdb
 E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\ref\MVCTest.Models.dll
+E:\Projects\Core\MVCTest\MVCTest.Models\obj\Debug\net6.0\MVCTest.Models.sourcelink.json

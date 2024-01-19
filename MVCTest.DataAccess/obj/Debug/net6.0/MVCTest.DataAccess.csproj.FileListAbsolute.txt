@@ -17,3 +17,4 @@ E:\Projects\Core\MVCTest\MVCTest.DataAccess\obj\Debug\net6.0\MVCTest.DataAccess.
 E:\Projects\Core\MVCTest\MVCTest.DataAccess\obj\Debug\net6.0\ref\MVCTest.DataAccess.dll
 E:\Projects\Core\MVCTest\MVCTest.DataAccess\bin\Debug\net6.0\MVCTest.Utility.dll
 E:\Projects\Core\MVCTest\MVCTest.DataAccess\bin\Debug\net6.0\MVCTest.Utility.pdb
+E:\Projects\Core\MVCTest\MVCTest.DataAccess\obj\Debug\net6.0\MVCTest.DataAccess.sourcelink.json

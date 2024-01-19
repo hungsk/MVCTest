@@ -1,13 +1,25 @@
+using GenericServices.Setup;
 using Microsoft.EntityFrameworkCore;
 using MVCTest.DataAccess.Data;
+using MVCTest.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<ApplicationDbContext>(option=>
+builder.Services.AddDbContext<ApplicationDbContext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+//高手-單DB
+builder.Services.GenericServicesSimpleSetup<ApplicationDbContext>(
+   Assembly.GetAssembly(typeof(Category)));
+//高手-多DB
+//builder.Services.ConfigureGenericServicesEntities(typeof(BookDbContext), typeof(OrderDbContext))
+//    .ScanAssemblesForDtos(Assembly.GetAssembly(typeof(BookListDto)))
+//    .RegisterGenericServices();
 
 var app = builder.Build();
 
